@@ -1,0 +1,190 @@
+body {
+    background-color: #EEEEEE;
+}
+
+
+#searchBox input[type="text"]{
+    float:left;
+    width:120px;
+    height: 20px;
+}
+
+#mainDiv {
+	margin-top: 74px;
+    height: auto;
+	width:1340px;
+	padding:5px;
+    overflow-x: visible;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.clear {
+	clear: both;
+}
+
+
+.profileAns {
+    display: block;
+    padding-right: 20px;
+}
+#profArticles {
+	width:800px;
+    height:100%;
+    float: left;
+    margin-left: 220px;
+    padding-left: 25px;
+    padding-right: 20px;
+}
+.articleWrapper {
+    margin-bottom: 30px;
+    width: 800px;
+    height: auto;
+}
+.articleInfo {
+    background-color: white;
+    float: left;
+    width: auto;
+    padding: 5px;
+    margin-right: 5px;
+}
+.articleViews {
+}
+.articleComments {
+    margin-top: 10px;
+}
+.articleInfo span {
+    display: block;
+    margin-left: 26px;
+    margin-top:2px;
+}
+.articleInfo img {
+    width: 20px;
+    float: left;
+    clear: both;
+}
+.articleData {
+    background-color: white;
+    display: inline-block;
+    width: 700px;
+}
+#profUpcoming {
+    position: fixed;
+	width:300px;
+    height:auto;
+	float: left;
+    left: 50%;
+    margin-left: 360px;
+}
+.articleHeader {
+    background-color: #76ADDF;
+    height: auto;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 50px;
+}
+.articleHeader a {
+    color: white;
+}
+.articleContent {
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    line-height: 20px;
+}
+#upcomingContent {
+    overflow: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.sliderDoc {
+    background-color:white;
+    text-align: left;
+    height:12%;
+    margin-top:5px;
+    overflow: auto;
+    padding:5px;
+    padding-left:10px;
+    padding-right:10px;
+}
+.sliderDocEvent {
+    width: 72%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: left;
+}
+.sliderDocDate {
+    width: 28%;
+    float: right;
+    text-align: right;
+}
+
+.row
+{
+    float:left;
+    border-top: 2px wheat dashed;
+    border-top: 2px #aaaaaa dashed;
+    width:10%;
+    text-align: left;
+}
+.txt
+{
+    width:15px;
+    height:15px;
+    border:0;
+    text-align: center;
+}
+.question
+{
+    width:90%;
+    float:left;
+    background-color: white;
+    padding-left: 20px;
+    border-top: 2px #aaaaaa dashed;
+    padding-top: 10px;
+    line-height: 25px;
+}
+.anch
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.b
+{
+    border-radius: 5px ;
+    background-color: #C4DAE9;
+}
+
+
+@media all and (max-width: 800px) {
+    #profInfo {
+        display: none;
+    }
+    #profUpcoming {
+        display: none;
+    }
+    #profArticles {
+        padding: 0;
+        width: 640px;
+        margin-left: 0;
+    }
+    .articleData {
+        width: 580px;
+    }
+    .articleWrapper {
+        width: 640px;
+    }
+    #mainDiv {
+        width: 640px;
+        margin-left: 5px;
+    }
+}
+@media all and (max-width: 500px) {
+}
+@media all and (max-width: 300px) {
+}

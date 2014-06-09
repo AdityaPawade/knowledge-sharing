@@ -1,0 +1,193 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="./CSS/question_reply.css">
+    <link type="text/css" href="./CSS/headerFooter.css" rel="stylesheet" />
+</head>
+<body>
+
+<header>
+    <img src="./images/kshare.png" />
+    <div id="searchBox">
+        <input type="text"/>
+        <input type="button" value="go"/>
+    </div>
+    <div id="links">
+        <a href="./home.html">Home</a>
+        <a href="./profile.html">Profile</a>
+    </div>
+</header>
+<div id="container">
+    <div id="myheader">
+        <div id="menu">
+            <nav id="navTag">
+                <ul id="mainMenu">
+                    <li><a href="questionpage.html">Questions</a></li>
+                    <li><a href="answered.html">Answered</a></li>
+                    <li><a href="unanswered.html">Unanswered</a></li>
+                    <li><a href="ask_question.html">Ask Question</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div id="main">
+        <div id="center">
+            <div class="row">
+                <script>
+                    function update3()
+                    {
+                        var x=document.getElementById("t4");
+                        x.value=parseInt(x.value)+parseInt("1");
+                    }
+                </script>
+                <br>
+
+                &nbsp;&nbsp;<img src="./images/View.png" style="width: 20px;height: 20px">&nbsp;&nbsp;  5<br>
+                &nbsp;&nbsp;<img src="./images/Messages.png" style="width: 20px;height: 20px">&nbsp;&nbsp; 7<br>
+
+            </div>
+            <div class="question">
+                <h2> <a href="#" class="anch">python overloading operators</a></h2>
+                <p style="font-size: 16px">i need to implement a DNA class which has attribute a sequence which consists of a string of characters from the alphabet ('A,C,G,T') and i need to overload some operators like less than,greater than,etc..
+                    <br>
+                    here is my code:</p>
+                <div class="code" >
+                    <p> class DNA:<br>
+                        def __init__(self,sequence):<br>
+                        self.seq=sequence<br><br>
+
+                        def __lt__(self,other):<br>
+                        return (self.seq=other)<br><br>
+
+                        def __le__(self,other):<br>
+                        return(self.seq=other)<br><br>
+
+                        def __gt__(self,other):<br>
+                        return(self.seq>other)<br><br>
+
+                        def __ge__(self,other):<br>
+                        return(len(self.seq)>=len(other))<br><br>
+
+                        def __eq__(self,other):<br>
+                        return (len(self.seq)==len(other))<br><br>
+
+                        def __ne__(self,other):<br>
+                        return not(self.__eq__)<br><br>
+
+                        dna_1=DNA('ACCGT')<br>
+                        dna_2=DNA('AGT')<br>
+                        print(dna_1>dna_2)<br><br>
+                    </p>
+                </div>
+                <p style="font-size: 16px">PROBLEM: when i print(dna_1>dna_2) it returns false instead of true..WHY IS IT SO???help please</p><br>
+                <Button type="button" class="b" onfocus=""><a href="pythonbutton.html">Python</a></Button><br>
+                <p style="text-align:right">2 hours ago&nbsp;&nbsp;</p>
+            </div>
+
+            <div id="replies">
+                <div class="question">
+                <h2>Answers</h2>
+                    </div>
+                <div class="question">
+                    <br>
+
+                    <p style="font-size: 16px">You probably want to compare seqs:</p>
+                    <div class="code">
+                        def __lt__(self, other):<br>
+                        return self.seq  other.seq<br>
+                    </div>
+                    <p style="text-align:right">2 hour ago&nbsp;&nbsp;</p>
+                   </div>
+
+                <div class="question">
+                    <p style="font-size: 16px">Not self's seq with other, self's seq with other's seq.<br>
+                        other here is another DNA.<br>
+                        If you need to compare lengths:</p>
+                    <div class="code">
+                        def __lt__(self, other):<br>
+                        return len(self.seq)  len(other.seq)
+                        <br><br>
+                    </div>
+                    <p style="text-align:right">1 hour ago&nbsp;&nbsp;</p>
+                </div>
+
+
+                <div class="question">
+                    <h2>Your Answer</h2>
+                </div>
+                <div class="question">
+
+                    <div class="answer">
+
+                        <form>
+                            <textarea style="width:97%; height: 100px;resize: vertical"></textarea><br><br>
+                            <button type="submit" style="border-radius: 5px;font-weight: bold;font-size: 16px">Post your Answer</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div id="right">
+            <div id="right_links">
+                <div class="profHeader"><span>Recently Discussed Topics</span></div>
+                <div id="upcomingContent">
+                    <div class="sliderPart">
+                        <div class="sliderDoc">
+                            <a href="question_reply.html">SQL run time error in asp.net c#</a>
+                        </div>
+                        <div class="sliderDoc">
+                            <a href="question_reply.html">WebApi and Controller overkill</a>
+                        </div>
+                        <div class="sliderDoc">
+                            <a href="question_reply.html">Spring validation framework multiple model attributes error message not displayed on jsp</a>
+                        </div>
+                        <div class="sliderDoc">
+                            <a href="question_reply.html">Use google bigquery build histogram graph</a>
+                        </div>
+
+                        <div class="sliderDoc">
+                            <a href="question_reply.html">validating date picker in android - restricting previous dates</a>
+                        </div>
+                        <div class="sliderDoc">
+                            <a href="question_reply.html">How to put a symbol at a specific point of a plot with Gnuplot</a>
+                        </div>
+                        <div class="sliderDoc">
+                            <a href="question_reply.html">Join two tables mysql, one to many relationship</a>
+                        </div>
+                        <div class="sliderDoc">
+                            <a href="question_reply.html">asp.net sql error running a select statement</a>
+                        </div>
+
+                        <div class="sliderDoc">
+                            <a href="question_reply.html">SQL run time error in asp.net c#</a>
+                        </div>
+                        <div class="sliderDoc">
+                            <a href="question_reply.html">WebApi and Controller overkill</a>
+                        </div>
+                        <div class="sliderDoc">
+                            <a href="question_reply.html">Spring validation framework multiple model attributes error message not displayed on jsp</a>
+                        </div>
+                        <div class="sliderDoc">
+                            <a href="question_reply.html">Use google bigquery build histogram graph</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+</div>
+<footer id="foot">Copyright &copy; 2013 VIT University</footer>
+</body>
+</html>
+
+</body>
+</html>

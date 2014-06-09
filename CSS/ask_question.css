@@ -1,0 +1,256 @@
+/*
+    Document   : index
+    Created on : Mar 19, 2013, 6:37:38 PM
+    Author     : saptarshi
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+body {
+    background-color: #eee;
+}
+#container
+{
+    margin: 80px auto 0;
+    height: 90%;
+    width: 95%;
+    background-color:transparent;
+}
+#myheader
+{
+    width: 100%;
+}
+#myheader a {
+    color: #ffffff;
+}
+
+#menu
+{
+    margin-left: 25%;
+    margin-right: 25%;
+    height: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+    clear: both;
+}
+*{
+    padding:0;
+    margin:0;
+
+}
+ul#mainMenu{
+    list-style-type:none;
+    text-align:  center;
+}
+ul#mainMenu li{
+    position:relative;
+    float:left;
+    width:125px;
+    padding:5px;
+    font-size: 20px;
+}
+ul#mainMenu li a{
+    display:block;
+    background-color:#818185;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+ul#mainMenu li:hover > ul{
+    display:block;
+}
+ul#mainMenu li a:hover{
+    background-color:#FF9900;
+}
+
+#main
+{
+    background-color: #eee;
+    width: 100%;
+    overflow: hidden;
+}
+form {
+    width: 98%;
+    padding: 0;
+    height: auto;
+}
+
+form button {
+
+    margin-bottom: 20px;
+}
+#center
+{
+    float:left;
+    width: 72.5%;
+    margin-right: 2.5%;
+    border-top: 2px #aaaaaa dashed;
+    border-bottom: 2px #aaaaaa dashed;
+}
+#right
+{
+    float: left;
+    width:25%;
+}
+
+#rightHeader {
+    background-color: #76ADDF;
+    height: auto;
+    padding-left: 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+}
+#rightInfo {
+    padding: 20px;
+}
+
+#myfooter
+{
+    background-color: gray;
+    text-align: center;
+}
+
+.name
+{
+    font-style: normal;
+    font-family: fantasy;
+    font-size: 25px;
+    font-weight: bold;
+}
+#profile
+{
+
+    padding: 15px;
+    display: inherit;
+}
+.txt
+{
+    width:15px;
+    height:15px;
+    border:0;
+    text-align: center;
+}
+.question
+{
+    width:100%;
+    float:left;
+    background-color: white;
+    padding-left: 20px;
+    padding-top: 10px;
+    line-height: 25px;
+}
+
+.question textarea {
+    width: 95%;
+}
+
+.anch
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.b
+{
+    border-radius: 5px ;
+    background-color: #C4DAE9;
+}
+#right_links
+{
+    line-height: 20px;
+}
+
+.code
+{
+    background-color: #EEEEEE;
+}
+
+.answer
+{
+    border-bottom:  2px wheat solid;
+    border-top:2px wheat dashed;
+    padding: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: large;
+}
+
+
+@media only screen and (max-width: 768px)
+{
+    #container
+    {
+        width:100%;
+    }
+
+    #profile
+    {
+        text-align: left;
+        padding: 0;
+    }
+    .name
+    {
+        font-size: 20px;
+    }
+    ul#mainMenu li
+    {
+        width:100px;
+        font-size: 15px;
+    }
+    #menu
+    {
+        margin-left: 25%;
+        margin-right: 17%;
+    }
+
+}
+@media only screen and (max-width: 520px)
+{
+    #container
+    {
+        width:100%;
+    }
+    #leftbar
+    {
+        width:100%;
+    }
+    #center
+    {
+        width:100%;
+    }
+    #right
+    {
+        width:100%;
+    }
+    .name
+    {
+        font-size: 25px;
+    }
+    #profile
+    {
+        text-align: center;
+        padding: 20px;
+    }
+    ul#mainMenu li
+    {
+        width:125px;
+        font-size: 20px;
+        text-align: center;
+    }
+    #menu
+    {
+        margin-left: 25%;
+        margin-right:25%;
+    }
+    #myheader
+    {
+        text-align: center;
+    }
+    .txt
+    {
+        width: 10px;
+        height: 12px;
+        font-size: 12px;
+    }
+}

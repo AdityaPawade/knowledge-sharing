@@ -1,0 +1,265 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>Hangout</title>
+    <link rel="stylesheet" href="./CSS/hangout.css" type="text/css"/>
+    <script>
+
+        var currentIndex=1,totalItemsInCarousel;
+        var carouselReference;
+        function initial(){
+            carouselReference = document.getElementById("myCarousel");
+            itemsArray = carouselReference.getElementsByClassName("carouselItem");
+            totalItemsInCarousel = itemsArray.length;
+        }
+
+        function navigateLeft(){
+            if(currentIndex == 0){
+                leftIndex = totalItemsInCarousel -1;
+            }
+            else
+                leftIndex = currentIndex -1;
+
+            leftItem = itemsArray[leftIndex];
+            leftItem.style.opacity = "1";
+            leftItem.style.left = "0px";
+
+            for(i=0;i<10;i++){
+                item = itemsArray[(currentIndex+i)%totalItemsInCarousel];
+                item.style.left = ((i+1)*150)+"px";
+            }
+            currentIndex = leftIndex;
+            if(currentIndex == 0){
+                leftIndex = totalItemsInCarousel -1;
+            }
+            else
+                leftIndex = currentIndex -1;
+
+            leftItem = itemsArray[leftIndex];
+            leftItem.style.opacity = "0";
+            leftItem.style.left = "-150px";
+        }
+
+        function navigateRight(){
+
+            rightIndex = (currentIndex+9)%totalItemsInCarousel;
+
+            rightItem = itemsArray[rightIndex];
+            rightItem.style.opacity = "1";
+            rightItem.style.left = "1600px";
+
+            for(i=0;i<10;i++){
+                item = itemsArray[(currentIndex+i)%totalItemsInCarousel];
+                item.style.left = ((i+1)*150)-300+"px";
+            }
+            currentIndex = (currentIndex+1)%totalItemsInCarousel;
+
+            rightIndex = (currentIndex+9)%totalItemsInCarousel;
+
+
+            rightItem = itemsArray[rightIndex];
+            rightItem.style.opacity = "0";
+            rightItem.style.left = "1600px";
+        }
+
+
+    </script>
+</head>
+
+<body onload="initial()" >
+<div class="wrapper">
+    <header>
+        <img src="./images/kshare.png" />
+        <div id="searchBox">
+            <input type="text"/>
+            <input type="button" value="go"/>
+        </div>
+        <div id="links">
+            <a href="./home.html">Home</a>
+            <a href="./profile.html">Profile</a>
+        </div>
+    </header>
+    <div id="main">
+
+        <div id="leftSideBar">
+
+            <div class="profHeader">
+                    Member Queue
+            </div>
+            <button>Register To Queue</button>
+            <div class="profInfo">
+                <ol>
+                    <li>
+                        <div class="profile-pic"><img src="./images/res.jpg"/></div>
+                        <div class="profile-details">
+                            <p class="profile-name">Aditya Pawade</p>
+                            <p class="profile-email"><a href="mailto:adityap174@gmail.com">adityap174@gmail.com</a></p>
+                        </div>
+
+                    </li>
+                    <li>
+                        <div class="profile-pic"><img src="./images/pp.jpg"/></div>
+                        <div class="profile-details">
+                            <p class="profile-name">Prashant Pande</p>
+                            <p class="profile-email"><a href="mailto:adityap174@gmail.com">prashant@gmail.com</a></p>
+                        </div>
+
+                    </li>
+                    <li>
+                        <div class="profile-pic"><img src="./images/sc.jpg"/></div>
+                        <div class="profile-details">
+                            <p class="profile-name">Swapnil Saurav</p>
+                            <p class="profile-email"><a href="mailto:adityap174@gmail.com">swapnil@gmail.com</a></p>
+                        </div>
+
+                    </li>
+
+                    <li>
+                        <div class="profile-pic"><img src="./images/sw.jpg"/></div>
+                        <div class="profile-details">
+                            <p class="profile-name">Saptarishi</p>
+                            <p class="profile-email"><a href="mailto:adityap174@gmail.com">saptarishi@gmail.com</a></p>
+                        </div>
+
+                    </li>
+
+
+
+                    <!-- </br>
+                     <li>
+                         <img src="./images/pp.jpg"/><label>Prashant Pande</label>
+                     </li>
+                     </br>
+                     <li>
+                         <img src="./images/sw.jpg"/><label>Saptarishi</label>
+                     </li>
+                     </br>
+                     <li>
+                         <img src="./images/sc.jpg"/><label>Swapnil Sourav</label>
+                     </li>
+                     </br>
+                     <li>
+                         <img src="./images/res.jpg"/><label>Aditya Pawade</label>
+                     </li>
+                     </br>
+                     <li>
+                         <img src="./images/pp.jpg"/><label>Prashant Pande</label>
+                     </li>
+                     </br>
+                     <li>
+                         <img src="./images/sw.jpg"/><label>Saptarishi</label>
+                     </li>
+                     </br>
+                     <li>
+                         <img src="./images/sc.jpg"/><label>Swapnil Sourav</label>
+                     </li>
+                     </br>  -->
+            </ol>
+            </div>
+        </div>
+
+        <div id="centerBar">
+            <div id="video_element">
+                <video width="400px" height="400px" controls>
+                    <source src="./images/video_file.mp4" type="video/mp4">
+                    <source src="./images/video_file.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <div id="rightSideBar">
+            <div class="profHeader">
+                Discussion Topics
+            </div>
+            <div class="topicsInfo">
+
+                <ul>
+                    <li>
+                        <div class="topic-title">Include more questions in OOPS Cycle-sheet</div>
+                    </li>
+                    <li>
+                        <div class="topic-title wrong">Include more questions in OOPS Cycle-sheet</div>
+                    </li>
+                    <li>
+                        <div class="topic-title">Include more questions in OOPS Cycle-sheet</div>
+                    </li>
+                    <li>
+                        <div class="topic-title info" >Include more questions in OOPS Cycle-sheet</div>
+                    </li>
+                    <li>
+                        <div class="topic-title info">Include more questions in OOPS Cycle-sheet</div>
+                    </li>
+                    <li>
+                        <div class="topic-title info">Include more questions in OOPS Cycle-sheet</div>
+                    </li>
+                    <li>
+                        <div class="topic-title info">Include more questions in OOPS Cycle-sheet</div>
+                    </li>
+                    <li>
+                        <div class="topic-title info">Include more questions in OOPS Cycle-sheet</div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="clear"></div>
+
+        <div id="centerBottomContent">
+
+
+            <div class="wrapper">
+                <div id="myCarousel" class="carousel">
+                    <div id="item1" class="carouselItem" style="left: 0px">
+                        <img src="./images/res.jpg" class="online_members"/>
+                    </div>
+                    <div id="item2" class="carouselItem" style="left: 150px">
+                        <img src="./images/pp.jpg" class="online_members"/>
+                    </div>
+                    <div id="item3" class="carouselItem" style="left: 300px">
+                        <img src="./images/sw.jpg" class="online_members"/>
+                    </div>
+                    <div id="item4" class="carouselItem" style="left: 450px">
+                        <img src="./images/sc.jpg" class="online_members"/>
+                    </div>
+                    <div id="item5" class="carouselItem" style="left: 600px">
+                        <img src="./images/res.jpg" class="online_members"/>
+                    </div>
+                    <div id="item6" class="carouselItem" style="left: 750px">
+                        <img src="./images/pp.jpg" class="online_members"/>
+                    </div>
+                    <div id="item7" class="carouselItem" style="left: 900px">
+                        <img src="./images/sw.jpg" class="online_members"/>
+                    </div>
+                    <div id="item8" class="carouselItem" style="left: 1050px">
+                        <img src="./images/sc.jpg" class="online_members"/>
+                    </div>
+                    <div id="item9" class="carouselItem" style="left: 1200px">
+                        <img src="./images/res.jpg" class="online_members"/>
+                    </div>
+                    <div id="item10" class="carouselItem" style="left: 1450px">
+                        <img src="./images/res.jpg" class="online_members"/>
+                    </div>
+
+                    <div id="leftNavigation" class="carouselNavigation" onclick="navigateLeft()">
+                        <img src="./images/carousel_left.png" alt="leftNavigation" style="width:15px;height:15px">
+                    </div>
+
+                    <div id="rightNavigation" class="carouselNavigation" onclick="navigateRight()">
+                        <img src="./images/carousel_right.png" alt="rightNavigation" style="width:15px;height:15px">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer id="myFooter">Copyright &copy; 2013 VIT University</footer>
+
+</div>
+</body>
+
+</html>

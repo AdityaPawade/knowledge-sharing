@@ -1,0 +1,67 @@
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width"/>
+    <body>
+        <link rel="stylesheet" href="./CSS/login.css"/>
+        <div id="signin">
+            <link rel="stylesheet" href="./CSS/login.css"/>
+            <header>
+                <h1>sign in</h1>
+            </header>
+            <form action="home.html">
+                <label for="username">Username:</label>
+                <input id="username" type="text" title="must be alphanumeric in 6-12 chars" pattern="[a-zA-Z0-9_-]{6,12}" autofocus required><br/>
+
+                <label for="password">Password:</label>
+                <input id="password" type="password" title="must be alphanumeric in 6-12 chars" pattern="[a-zA-Z0-9_-]{6,12}" autofocus required>
+
+
+                <span class="icon-validation" aria-hidden="true" data-icon="&#xe000"></span>	
+                <input id="submit" type="submit" value="sign in">
+            </form>
+        </div>
+        <div id="signup">
+            <header>
+                <h1>sign up</h1>
+            </header>
+            <form>
+                <label for="username">Username:</label>
+                <input id="username" type="text" title="must be alphanumeric in 6-12 chars" pattern="[a-zA-Z0-9_-]{6,12}" autofocus required><br/>
+
+                <label for="password">Password:</label>
+                <input id="password" type="password" title="must be alphanumeric in 6-12 chars" pattern="[a-zA-Z0-9_-]{6,12}" autofocus required>
+
+                <label for="email">Email ID:</label>
+                <input id="email" type="email" title="must have an @ symbol followed by the name of your service provider" autofocus required><br/>
+
+                <label for="department">Department:</label>
+
+                <select id = "mydepartment">
+                    <option value = "1">Computer Science</option>
+                    <option value = "2">Electronics</option>
+                    <option value = "3">Mechanical</option>
+                    <option value = "4">Biotechnology</option>
+                </select>
+                <br/>
+
+
+                <label for="designation">Designation:</label>
+
+                <select id = "mydesignation">
+                    <option value = "1">Head Of Department</option>
+                    <option value = "2">Assistant Professor</option>
+                    <option value = "3">Senior Professor</option>
+                    <option value = "4">Program Manager</option>
+                </select>
+
+                <span class="icon-validation" aria-hidden="true" data-icon="&#xe000"></span>	
+                <input id="submit" type="submit" value="create">   
+            </form>
+
+        </div>
+
+
+    </body>
+</html>

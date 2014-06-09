@@ -1,0 +1,252 @@
+/* 
+    Document   : index
+    Created on : Mar 19, 2013, 6:37:38 PM
+    Author     : saptarshi
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+#container
+{
+    margin-right: auto;
+    margin-left: auto;
+    height: 90%;
+    width: 95%;
+    background-color: #F4F7D9;
+}
+#myheader
+{
+    width: 100%;
+    background-color: #F4F7D9;
+}
+
+#menu
+{
+    margin-left: 25%;
+    margin-right: 25%;
+     height: 40px;
+    text-align: center;
+    margin-top:1%;
+    margin-bottom: 3%;
+    clear: both; 
+}
+  *{
+		padding:0px;
+		margin:0px;	
+			
+	}
+	ul#mainMenu{
+		list-style-type:none;
+                text-align:  center;
+        }
+	ul#mainMenu li{
+		position:relative;
+		float:left;	
+		width:125px;
+                padding:5px;
+		font-size: 20px;
+          } 
+	ul#mainMenu li a{
+		display:block;
+                background-color:#818185;
+                border-radius: 10px;
+                padding: 5px;
+                }
+	
+	ul#mainMenu li:hover > ul{
+	display:block;
+          }	
+        ul#mainMenu li a:hover{
+	background-color:#FF9900;
+          }
+ ul#mainMenu li a:default
+ {
+     background-color: red;
+ }
+ 
+#main
+{
+    background-color: white;
+   
+    width: 100%;
+    overflow: hidden;
+}
+#leftbar
+{
+    float:left;
+    width: 25%;
+   padding-bottom: 2000px;
+   margin-bottom: -2000px;
+    background-color: #F4F7D9;
+   
+}
+#center
+{
+    float:left;
+    width: 50%;
+     padding-bottom: 2000px;
+   margin-bottom: -2000px;
+    background-color: white;
+    height: max-content;
+}
+#right
+{
+    float: left;
+     padding-bottom: 2000px;
+   margin-bottom: -2000px;
+    background-color:#F4F7D9;
+    width:25%;
+}
+#myfooter
+{
+    background-color: grey;
+    text-align: center;
+}
+
+.name
+          {
+              font-style: normal;
+              font-family: fantasy;
+              font-size: 25px;
+              font-weight: bold;
+          }
+#profile
+           {
+               
+               padding: 15px;
+               display: inherit;
+           }
+  .row
+  {
+      width: 15%; 
+      float:left;
+      /* background-color: crimson;*/
+       padding-bottom: 2000px;
+       margin-bottom: -2000px;
+      border-top: 2px wheat dashed;
+       text-align: center;
+  }
+.text
+            {
+                width:45px;
+                 text-align: center;
+                 width: 30px;
+                 border: 0px;
+            }
+.question
+            {
+                 width:85%;
+                float:left;
+               
+                background-color: #F4F7D9;
+              padding-bottom: 2000px;
+               margin-bottom: -2000px;
+                border-top: 2px wheat dashed;
+            }
+.anch
+            {
+                font-size: 25px;
+                font-weight: bold;
+            }
+ .b
+            {
+                border-radius: 5px ;
+                background-color: #C4DAE9;
+            }
+ #right_links
+           {
+               padding: 10px;
+               line-height: 20px;
+           }
+            
+ .code
+           {
+               background-color: #EEEEEE;
+           }           
+            
+    .answer
+           {
+              width: 100%;
+              border-top:2px wheat dashed;
+              clear: both;
+              background-color: #F4F7D9;
+              padding-bottom: 2000px;
+               margin-bottom: -2000px;
+              font-size: large;
+              text-align: center;
+              float:left;
+           }         
+            
+            
+            @media only screen and (max-width: 768px)
+{
+    #container
+    {
+        width:100%;
+    }
+   
+    #profile
+    {
+        text-align: left;
+        padding: 0px;
+    }
+    .name
+    {
+        font-size: 20px;
+    }
+    ul#mainMenu li
+    {
+    width:100px;
+    font-size: 15px;
+    }
+    #menu
+    {
+        margin-left: 25%;
+        margin-right: 17%;
+    }
+    
+}
+@media only screen and (max-width: 520px)
+{
+    #container
+    {
+        width:100%;
+    }
+    #leftbar
+    {
+        width:100%;
+    }
+    #center
+    {
+        width:100%;
+    }
+    #right
+    {
+        width:100%;
+    }
+    .name
+    {
+        font-size: 25px;
+    }
+    #profile
+    {
+        text-align: center;
+        padding: 20px;
+    }
+    ul#mainMenu li
+    {
+    width:125px;
+    font-size: 20px;
+    }
+    #menu
+    {
+        margin-left: 25%;
+        margin-right:25%;
+    }
+    .txt
+    {
+        width: 10px;
+        height: 12px;
+        font-size: 12px;
+    }
+}

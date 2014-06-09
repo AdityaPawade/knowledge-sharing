@@ -1,0 +1,551 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Knowledge Sharing</title>
+        <link type="text/css" href="CSS/reset.css" rel="stylesheet" />
+        <link type="text/css" href="CSS/homeStyle.css" rel="stylesheet" />
+        <link type="text/css" href="CSS/headerFooter.css" rel="stylesheet" />
+        <script type="text/javascript" src="JS/homeJS.js" ></script>
+    </head>
+    <body id="bodyDiv" onload="assignEvents()">
+    	<div id="outerWrapper">
+    	<header>
+            <img src="./images/kshare.png" />
+    		<div id="searchBox">
+    			<input type="text"/>
+    			<input type="button" value="go"/>
+    		</div>
+    		<div id="links">
+                <a href="./home.html">Home</a>
+    			<a href="./profile.html">Profile</a>
+    		</div>
+    	</header>
+    	<div id="mask"></div>
+    	<div id="newArticle">
+    		<div id="holder">Drop Image Here</div>
+    		<div class="articleGap">New Article</div>
+    		<div class="newArticleInfo">
+	    		<span>Title</span><input type="text" />
+	    		<div class="clear"></div>
+	    		<span>Description</span><textarea></textarea>
+	    		<div class="clear"></div>
+	    		<input type="button" value="submit" />
+                <div class="clear"></div>
+    		</div>
+    	</div>
+        <div id="newDiscussion">
+            <div class="articleGap">New Discussion</div>
+            <div class="newArticleInfo">
+                <span>Title</span><input type="text" />
+                <div class="clear"></div>
+                <span>Tags</span><input type="text" />
+                <div class="clear"></div>
+                <span>Description</span><textarea></textarea>
+                <div class="clear"></div>
+                <input type="button" value="submit" />
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div id="newDocument">
+            <div class="articleGap">New Document</div>
+            <div class="newArticleInfo">
+                <span>Title</span><input type="text" />
+                <div class="clear"></div>
+                <span>Document</span><input type="file" />
+                <div class="clear"></div>
+                <span>Description</span><textarea></textarea>
+                <div class="clear"></div>
+                <input type="button" value="submit" />
+                <div class="clear"></div>
+            </div>
+        </div>
+    	<div id="openArticle">
+    		<div id="openArticleHeading"><span>Beautiful Universe</span></div>
+    		<div id="openArticleImage"><img id="openArticleImg" src="images/img2.jpg" /></div>
+    		<div id="openArticleDescription"><span>The universe is a very beautiful thing.
+    			There are number of galaxies in the universe. Milkyway is a special 
+    			galaxy. This is the galaxy in which we live.
+    			The universe is a very beautiful thing.
+    			There are number of galaxies in the universe. Milkyway is a special 
+    			galaxy. This is the galaxy in which we live.</span></div>
+    		<div id="openArticleComments">
+				<div class="articleCommentSection">
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice. I like your posts very much. </span>
+	    			</div>
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice. I gained a lot of knowledge</span>
+	    			</div>
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice. I follow your every post</span>
+	    			</div>
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice. Please continue posting !</span>
+	    			</div>
+	    			<input type="text" placeholder="comment"/>
+	    			</div>
+			</div>
+			<div id="openArticleFooter"></div>
+    	</div>
+    	<div id="wrapper">
+    		<div id="create"><span id="createArticle">Create</span></div>
+    		<div id="upcoming">
+    			<div class="sliderHeading">Upcoming</div>
+                <div class="sliderPart">
+                    <div class="sliderDoc">
+                        <div class="sliderDocEvent"><a href="hangout.html">Meeting for reference book selection</a></div>
+                        <div class="sliderDocDate">25/08/13</div>
+                    </div>
+                    <div class="sliderDoc">
+                        <div class="sliderDocEvent"><a href="hangout.html">Hangout to discuss course plan</a></div>
+                        <div class="sliderDocDate">25/08/13</div>
+                    </div>
+                    <div class="sliderDoc">
+                        <div class="sliderDocEvent"><a href="hangout.html">Weekly CSE meeting</a></div>
+                        <div class="sliderDocDate">25/08/13</div>
+                    </div>
+                    <div class="sliderDoc">
+                        <div class="sliderDocEvent"><a href="hangout.html">Change in Quiz pattern</a></div>
+                        <div class="sliderDocDate">25/08/13</div>
+                    </div>
+                </div>
+    		</div>
+    		<div id="discussions">
+    			<div class="sliderHeading" onclick="location.href='questionpage.html'">Discussions</div>
+    			<div class="sliderCreate"><input id="newDiscussionButton" type="button" value="create new Discussion" /></div>
+    			<div class="sliderSubHeading">Trending</div>
+    			<div class="sliderPart">
+    				<div class="sliderDoc"><a href="./question_reply.html">How to create flexible layout for a web page ?</a></div>
+    				<div class="sliderDoc"><a href="./question_reply.html">Simple tutorial for using foundation JS</a></div>
+    				<div class="sliderDoc"><a href="./question_reply.html">Using CSS3 selectors to make selection easier</a></div>
+    				<div class="sliderDoc"><a href="./question_reply.html">New element discovered ! Big breakthrough</a></div>
+    				<div class="sliderDoc"><a href="./question_reply.html">How to create Pop Up menu</a></div>
+    				<div class="sliderDoc"><a href="./question_reply.html">Error in running Java Code</a></div>
+    				<div class="sliderDoc"><a href="./question_reply.html">Best IDE for Java</a></div>
+    			</div>
+    			<div class="sliderSubHeading">Latest</div>
+    			<div class="sliderPart">
+    				<div class="sliderDoc"><a href="./question_reply.html">Java code for divide and conquer ( quick sort )</a></div>
+    				<div class="sliderDoc"><a href="./question_reply.html">How to create flexible layout for a web page ?</a></div>
+    				<div class="sliderDoc"><a href="./question_reply.html">Simple tutorial for using foundation JS</a></div>
+    				<div class="sliderDoc"><a href="./question_reply.html">Using CSS3 selectors to make selection easier</a></div>
+    				<div class="sliderDoc"><a href="./question_reply.html">New element discovered ! Big breakthrough</a></div>
+    				<div class="sliderDoc"><a href="./question_reply.html">Best reference book for electronics</a></div>
+    				<div class="sliderDoc"><a href="./question_reply.html">New course plan for ethics and values</a></div>
+    			</div></div>
+    		<div id="documents">
+    			<div class="sliderHeading"  onclick="location.href='questionpage.html'">Documents</div>
+    			<div class="sliderCreate"><input id="newDocumentButton" type="button" value="create new Document" /></div>
+    			<div class="sliderSubHeading">Trending</div>
+    			<div class="sliderPart">
+    				<div class="sliderDoc"><a href="./question_reply.html">How to create flexible layout for a web page ?</a></div>
+    				<div class="sliderDoc"><a href="./question_reply.html">Simple tutorial for using foundation JS</a></div>
+    				<div class="sliderDoc"><a href="./question_reply.html">Using CSS3 selectors to make selection easier</a></div>
+    				<div class="sliderDoc"><a href="./question_reply.html">New element discovered ! Big breakthrough</a></div>
+    				<div class="sliderDoc"><a href="./question_reply.html">How to create Pop Up menu</a></div>
+    				<div class="sliderDoc"><a href="./question_reply.html">Error in running Java Code</a></div>
+    				<div class="sliderDoc"><a href="./question_reply.html">Best IDE for Java</a></div>
+    			</div>
+    			<div class="sliderSubHeading">Latest</div>
+    			<div class="sliderPart">
+    				<div class="sliderDoc"><a href="./question_reply.html">Java code for divide and conquer ( quick sort )</a></div>
+    				<div class="sliderDoc"><a href="./question_reply.html">How to create flexible layout for a web page ?</a></div>
+    				<div class="sliderDoc"><a href="./question_reply.html">Simple tutorial for using foundation JS</a></div>
+    				<div class="sliderDoc"><a href="./question_reply.html">Using CSS3 selectors to make selection easier</a></div>
+    				<div class="sliderDoc"><a href="./question_reply.html">New element discovered ! Big breakthrough</a></div>
+    				<div class="sliderDoc"><a href="./question_reply.html">Best reference book for electronics</a></div>
+    				<div class="sliderDoc"><a href="./question_reply.html">New course plan for ethics and values</a></div>
+    			</div></div>
+	    	<div id="mainDiv">
+	    		<div class="articleWrapper"><div class="articleEntry">
+	    			<div class="articleHeading">
+	    				<span>Beautiful Universe</span>
+	    			</div>
+	    			<img src="images/img2.jpg" class="articleImg">
+	    			<div class="articleFooter">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span>11-Mar-13</span>
+	    			</div>
+	    			<div class="articleCommentSection">
+                        <div class="articleComment">
+                            <a href="./profile.html">Aditya Pawade</a>
+                            <span> - The picture posted is very nice.</span>
+                        </div>
+                        <div class="articleComment">
+                            <a href="./profile.html">Aditya Pawade</a>
+                            <span> - The picture posted is very nice.</span>
+                        </div>
+                        <div class="articleComment">
+                            <a href="./profile.html">Aditya Pawade</a>
+                            <span> - The picture posted is very nice.</span>
+                        </div>
+                        <input type="text" placeholder="comment"/>
+                    </div>
+	    		</div></div>
+				<div class="articleWrapper"><div class="articleEntry">
+	    			<div class="articleHeading">
+	    				<span>Beautiful Universe</span>
+	    			</div>
+	    			<img src="images/img1.jpg" class="articleImg">
+	    			<div class="articleFooter">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span>11-Mar-13</span>
+	    			</div>
+	    			<div class="articleCommentSection">
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+                        <input type="text" placeholder="comment"/>
+                    </div>
+                </div></div>
+				<div class="articleWrapper"><div class="articleEntry">
+	    			<div class="articleHeading">
+	    				<span>Beautiful Universe</span>
+	    			</div>
+	    			<img src="images/img3.jpg" class="articleImg">
+	    			<div class="articleFooter">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span>11-Mar-13</span>
+	    			</div>
+	    			<div class="articleCommentSection">
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+                        <input type="text" placeholder="comment"/>
+                    </div>
+                </div></div>
+				<div class="articleWrapper"><div class="articleEntry">
+	    			<div class="articleHeading">
+	    				<span>Beautiful Universe</span>
+	    			</div>
+	    			<img src="images/img4.jpg" class="articleImg">
+	    			<div class="articleFooter">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span>11-Mar-13</span>
+	    			</div>
+	    			<div class="articleCommentSection">
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+                        <input type="text" placeholder="comment"/>
+                    </div>
+                </div></div>
+				<div class="articleWrapper"><div class="articleEntry">
+	    			<div class="articleHeading">
+	    				<span>Beautiful Universe</span>
+	    			</div>
+	    			<img src="images/img5.jpg" class="articleImg">
+	    			<div class="articleFooter">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span>11-Mar-13</span>
+	    			</div>
+	    			<div class="articleCommentSection">
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+                        <input type="text" placeholder="comment"/>
+                    </div>
+                </div></div>
+	    		<div class="articleWrapper"><div class="articleEntry">
+	    			<div class="articleHeading">
+	    				<span>Beautiful Universe</span>
+	    			</div>
+	    			<img src="images/img5.jpg" class="articleImg">
+	    			<div class="articleFooter">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span>11-Mar-13</span>
+	    			</div>
+	    			<div class="articleCommentSection">
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+                        <input type="text" placeholder="comment"/>
+                    </div>
+                </div></div>
+	    		
+	    		<div class="articleWrapper"><div class="articleEntry">
+	    			<div class="articleHeading">
+	    				<span>Beautiful Universe</span>
+	    			</div>
+	    			<img src="images/img2.jpg" class="articleImg">
+	    			<div class="articleFooter">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span>11-Mar-13</span>
+	    			</div>
+	    			<div class="articleCommentSection">
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+                        <input type="text" placeholder="comment"/>
+                    </div>
+                </div></div>
+				<div class="articleWrapper"><div class="articleEntry">
+	    			<div class="articleHeading">
+	    				<span>Beautiful Universe</span>
+	    			</div>
+	    			<img src="images/img1.jpg" class="articleImg">
+	    			<div class="articleFooter">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span>11-Mar-13</span>
+	    			</div>
+	    			<div class="articleCommentSection">
+                        <input type="text" placeholder="comment"/>
+                    </div>
+                </div></div>
+				<div class="articleWrapper"><div class="articleEntry">
+	    			<div class="articleHeading">
+	    				<span>Beautiful Universe</span>
+	    			</div>
+	    			<img src="images/img3.jpg" class="articleImg">
+	    			<div class="articleFooter">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span>11-Mar-13</span>
+	    			</div>
+	    			<div class="articleCommentSection">
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+                        <input type="text" placeholder="comment"/>
+                    </div>
+                </div></div>
+				<div class="articleWrapper"><div class="articleEntry">
+	    			<div class="articleHeading">
+	    				<span>Beautiful Universe</span>
+	    			</div>
+	    			<img src="images/img4.jpg" class="articleImg">
+	    			<div class="articleFooter">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span>11-Mar-13</span>
+	    			</div>
+	    			<div class="articleCommentSection">
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+                        <input type="text" placeholder="comment"/>
+                    </div>
+                </div></div>
+				<div class="articleWrapper"><div class="articleEntry">
+	    			<div class="articleHeading">
+	    				<span>Beautiful Universe</span>
+	    			</div>
+	    			<img src="images/img5.jpg" class="articleImg">
+	    			<div class="articleFooter">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span>11-Mar-13</span>
+	    			</div>
+	    			<div class="articleCommentSection">
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+                        <input type="text" placeholder="comment"/>
+                    </div>
+                </div></div>
+
+	    		
+	    		<div class="articleWrapper"><div class="articleEntry">
+	    			<div class="articleHeading">
+	    				<span>Beautiful Universe</span>
+	    			</div>
+	    			<img src="images/img2.jpg" class="articleImg">
+	    			<div class="articleFooter">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span>11-Mar-13</span>
+	    			</div>
+	    			<div class="articleCommentSection">
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+                        <input type="text" placeholder="comment"/>
+                    </div>
+                </div></div>
+				<div class="articleWrapper"><div class="articleEntry">
+	    			<div class="articleHeading">
+	    				<span>Beautiful Universe</span>
+	    			</div>
+	    			<img src="images/img1.jpg" class="articleImg">
+	    			<div class="articleFooter">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span>11-Mar-13</span>
+	    			</div>
+	    			<div class="articleCommentSection">
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+                        <input type="text" placeholder="comment"/>
+                    </div>
+                </div></div>
+				<div class="articleWrapper"><div class="articleEntry">
+	    			<div class="articleHeading">
+	    				<span>Beautiful Universe</span>
+	    			</div>
+	    			<img src="images/img3.jpg" class="articleImg">
+	    			<div class="articleFooter">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span>11-Mar-13</span>
+	    			</div>
+	    			<div class="articleCommentSection">
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+                        <input type="text" placeholder="comment"/>
+                    </div>
+                </div></div>
+				<div class="articleWrapper"><div class="articleEntry">
+	    			<div class="articleHeading">
+	    				<span>Beautiful Universe</span>
+	    			</div>
+	    			<img src="images/img4.jpg" class="articleImg">
+	    			<div class="articleFooter">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span>11-Mar-13</span>
+	    			</div>
+	    			<div class="articleCommentSection">
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+                        <input type="text" placeholder="comment"/>
+                    </div>
+                </div></div>
+				<div class="articleWrapper"><div class="articleEntry">
+	    			<div class="articleHeading">
+	    				<span>Beautiful Universe</span>
+	    			</div>
+	    			<img src="images/img5.jpg" class="articleImg">
+	    			<div class="articleFooter">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span>11-Mar-13</span>
+	    			</div>
+	    			<div class="articleCommentSection">
+	    			<div class="articleComment">
+	    				<a href="./profile.html">Aditya Pawade</a>
+	    				<span> - The picture posted is very nice.</span>
+	    			</div>
+                        <input type="text" placeholder="comment"/>
+                    </div>
+                </div></div>
+	    		
+	    	</div>
+    	</div>
+		<footer id="foot">Copyright &copy; 2013 VIT University</footer>
+		</div>
+    </body>
+</html>
